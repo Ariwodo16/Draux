@@ -139,9 +139,9 @@ function Nav() {
         padding: "0 2rem",
         height: "64px",
         display: "flex", alignItems: "center", justifyContent: "space-between",
-        background: scrolled ? "rgba(240,238,232,0.94)" : "transparent",
+        background: scrolled ? "rgba(10,14,15,0.92)" : "transparent",
         backdropFilter: scrolled ? "blur(16px)" : "none",
-        borderBottom: scrolled ? "1px solid rgba(60,90,100,0.1)" : "none",
+        borderBottom: scrolled ? "1px solid rgba(60,120,130,0.15)" : "none",
         transition: "all 0.4s ease",
       }}
     >
@@ -152,17 +152,17 @@ function Nav() {
       <div style={{ display: "flex", gap: "2.5rem" }} className="desktop-nav">
         {NAV_LINKS.map(l => (
           <a key={l} href={`#${l.toLowerCase()}`}
-            style={{ fontSize: "0.8rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "#9AB4BC", textDecoration: "none", transition: "color 0.2s" }}
-            onMouseEnter={e => e.target.style.color = "#2E3D42"}
-            onMouseLeave={e => e.target.style.color = "#9AB4BC"}
+            style={{ fontSize: "0.8rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "#4A6A74", textDecoration: "none", transition: "color 0.2s" }}
+            onMouseEnter={e => e.target.style.color = "#E8EDEE"}
+            onMouseLeave={e => e.target.style.color = "#4A6A74"}
           >{l}</a>
         ))}
       </div>
 
       <a href="#contact"
-        style={{ fontSize: "0.78rem", letterSpacing: "0.1em", textTransform: "uppercase", background: "#2E3D42", color: "#F0EEE8", padding: "0.55rem 1.25rem", borderRadius: "100px", textDecoration: "none", fontWeight: 600, transition: "background 0.2s" }}
+        style={{ fontSize: "0.78rem", letterSpacing: "0.1em", textTransform: "uppercase", background: "#E8EDEE", color: "#0A0E0F", padding: "0.55rem 1.25rem", borderRadius: "100px", textDecoration: "none", fontWeight: 600, transition: "background 0.2s" }}
         onMouseEnter={e => e.target.style.background = "#5E8E8C"}
-        onMouseLeave={e => e.target.style.background = "#2E3D42"}
+        onMouseLeave={e => e.target.style.background = "#E8EDEE"}
       >
         Hire Me
       </a>
@@ -185,16 +185,16 @@ function Hero() {
     }}>
       <div style={{
         position: "absolute", inset: 0,
-        background: "radial-gradient(ellipse 70% 50% at 70% 30%, rgba(60,100,110,0.06) 0%, transparent 65%)",
+        background: "radial-gradient(ellipse 70% 50% at 70% 30%, rgba(60,140,150,0.07) 0%, transparent 65%)",
         pointerEvents: "none",
       }} />
 
-      <div style={{ position: "absolute", top: "64px", left: "2rem", right: "2rem", height: "1px", background: "rgba(60,90,100,0.1)" }} />
+      <div style={{ position: "absolute", top: "64px", left: "2rem", right: "2rem", height: "1px", background: "rgba(60,120,130,0.15)" }} />
 
       <div style={{
         position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)",
         fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(8rem, 20vw, 22rem)",
-        fontWeight: 300, color: "rgba(46,61,66,0.04)", whiteSpace: "nowrap",
+        fontWeight: 300, color: "rgba(232,237,238,0.03)", whiteSpace: "nowrap",
         letterSpacing: "-0.04em", userSelect: "none", pointerEvents: "none",
         lineHeight: 1,
       }}>
@@ -215,7 +215,7 @@ function Hero() {
             fontFamily: "'Cormorant Garamond', serif",
             fontSize: "clamp(3rem, 7vw, 7rem)",
             fontWeight: 400, lineHeight: 1.05,
-            letterSpacing: "-0.02em", color: "#2E3D42",
+            letterSpacing: "-0.02em", color: "#E8EDEE",
             margin: 0, marginBottom: "2.5rem",
             maxWidth: "900px",
           }}>
@@ -227,17 +227,17 @@ function Hero() {
               display: "inline-flex", alignItems: "center", gap: "0.6rem",
               fontSize: "0.82rem", letterSpacing: "0.1em", textTransform: "uppercase",
               color: "#5E8E8C", textDecoration: "none",
-              borderBottom: "1px solid rgba(94,142,140,0.4)", paddingBottom: "0.2rem",
+              borderBottom: "1px solid rgba(94,142,140,0.45)", paddingBottom: "0.2rem",
               transition: "border-color 0.2s, color 0.2s",
             }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = "#5E8E8C"; e.currentTarget.style.color = "#2E3D42"; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(94,142,140,0.4)"; e.currentTarget.style.color = "#5E8E8C"; }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = "#5E8E8C"; e.currentTarget.style.color = "#E8EDEE"; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = "rgba(94,142,140,0.45)"; e.currentTarget.style.color = "#5E8E8C"; }}
             >
               View Work
               <span style={{ fontSize: "1rem" }}>→</span>
             </a>
-            <span style={{ color: "rgba(60,90,100,0.2)", fontSize: "0.8rem" }}>·</span>
-            <span style={{ fontSize: "0.8rem", color: "#9AB4BC", letterSpacing: "0.05em" }}>
+            <span style={{ color: "rgba(60,120,130,0.25)", fontSize: "0.8rem" }}>·</span>
+            <span style={{ fontSize: "0.8rem", color: "#4A6A74", letterSpacing: "0.05em" }}>
               Custom-coded. No templates. No shortcuts.
             </span>
           </div>
@@ -246,12 +246,12 @@ function Hero() {
         <div style={{
           display: "flex", gap: "3rem", marginTop: "5rem", flexWrap: "wrap",
           opacity: loaded ? 1 : 0, transition: "opacity 1s ease 0.8s",
-          borderTop: "1px solid rgba(60,90,100,0.1)", paddingTop: "2rem",
+          borderTop: "1px solid rgba(60,120,130,0.15)", paddingTop: "2rem",
         }}>
           {[["5+", "Projects Delivered"], ["2–4 wk", "Avg. Timeline"], ["100%", "Custom Code"]].map(([n, l]) => (
             <div key={l}>
-              <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2rem", fontWeight: 400, color: "#2E3D42", lineHeight: 1 }}>{n}</div>
-              <div style={{ fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "#9AB4BC", marginTop: "0.4rem" }}>{l}</div>
+              <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "2rem", fontWeight: 400, color: "#E8EDEE", lineHeight: 1 }}>{n}</div>
+              <div style={{ fontSize: "0.72rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "#4A6A74", marginTop: "0.4rem" }}>{l}</div>
             </div>
           ))}
         </div>
@@ -268,12 +268,12 @@ function Work() {
       <FadeIn>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "4rem", flexWrap: "wrap", gap: "1rem" }}>
           <div>
-            <p style={{ fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#9AB4BC", marginBottom: "0.75rem" }}>Selected Work</p>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 400, color: "#2E3D42", margin: 0, letterSpacing: "-0.01em" }}>
+            <p style={{ fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#4A6A74", marginBottom: "0.75rem" }}>Selected Work</p>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 400, color: "#E8EDEE", margin: 0, letterSpacing: "-0.01em" }}>
               Projects
             </h2>
           </div>
-          <p style={{ fontSize: "0.85rem", color: "#6A8A94", maxWidth: "340px", lineHeight: 1.7 }}>
+          <p style={{ fontSize: "0.85rem", color: "#7A9AA6", maxWidth: "340px", lineHeight: 1.7 }}>
             A selection of custom websites and landing pages built for real businesses.
           </p>
         </div>
@@ -284,7 +284,7 @@ function Work() {
           <FadeIn key={p.title} delay={i * 0.08}>
             <div
               style={{
-                borderTop: "1px solid rgba(60,90,100,0.1)",
+                borderTop: "1px solid rgba(60,120,130,0.15)",
                 padding: "2.5rem 0",
                 display: "grid",
                 gridTemplateColumns: "1fr auto",
@@ -299,10 +299,10 @@ function Work() {
             >
               <div>
                 <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginBottom: "0.75rem", flexWrap: "wrap" }}>
-                  <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 400, color: "#2E3D42", letterSpacing: "-0.01em" }}>
+                  <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontWeight: 400, color: "#E8EDEE", letterSpacing: "-0.01em" }}>
                     {p.title}
                   </span>
-                  <span style={{ fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#6A8A94", background: "rgba(60,90,100,0.06)", padding: "0.3rem 0.75rem", borderRadius: "100px" }}>
+                  <span style={{ fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "#7A9AA6", background: "rgba(60,120,130,0.08)", padding: "0.3rem 0.75rem", borderRadius: "100px" }}>
                     {p.category}
                   </span>
                 </div>
@@ -311,28 +311,28 @@ function Work() {
                   overflow: "hidden", maxHeight: active === i ? "300px" : "0",
                   transition: "max-height 0.5s cubic-bezier(0.16,1,0.3,1)",
                 }}>
-                  <p style={{ fontSize: "0.9rem", color: "#6A8A94", lineHeight: 1.8, marginBottom: "1.25rem", maxWidth: "600px" }}>
+                  <p style={{ fontSize: "0.9rem", color: "#7A9AA6", lineHeight: 1.8, marginBottom: "1.25rem", maxWidth: "600px" }}>
                     {p.description}
                   </p>
                   <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap", marginBottom: "1.5rem" }}>
                     {p.tags.map(t => (
-                      <span key={t} style={{ fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "#7EAAA8", border: "1px solid rgba(60,90,100,0.15)", padding: "0.25rem 0.65rem", borderRadius: "100px" }}>{t}</span>
+                      <span key={t} style={{ fontSize: "0.7rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "#7EAAA8", border: "1px solid rgba(60,120,130,0.2)", padding: "0.25rem 0.65rem", borderRadius: "100px" }}>{t}</span>
                     ))}
                   </div>
                   <div style={{ display: "flex", gap: "1rem" }}>
-                    {p.live && <a href={p.live} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.78rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "#5E8E8C", textDecoration: "none", borderBottom: "1px solid rgba(94,142,140,0.4)", paddingBottom: "0.15rem" }}>Live Site →</a>}
-                    <a href="#" style={{ fontSize: "0.78rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "#9AB4BC", textDecoration: "none", borderBottom: "1px solid rgba(60,90,100,0.15)", paddingBottom: "0.15rem" }}>Case Study →</a>
+                    {p.live && <a href={p.live} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.78rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "#5E8E8C", textDecoration: "none", borderBottom: "1px solid rgba(94,142,140,0.45)", paddingBottom: "0.15rem" }}>Live Site →</a>}
+                    <a href="#" style={{ fontSize: "0.78rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "#4A6A74", textDecoration: "none", borderBottom: "1px solid rgba(60,120,130,0.2)", paddingBottom: "0.15rem" }}>Case Study →</a>
                   </div>
                 </div>
               </div>
 
               <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
-                <span style={{ fontSize: "0.75rem", color: "#9AB4BC", letterSpacing: "0.05em" }}>{p.year}</span>
+                <span style={{ fontSize: "0.75rem", color: "#4A6A74", letterSpacing: "0.05em" }}>{p.year}</span>
                 <div style={{
                   width: "32px", height: "32px", borderRadius: "50%",
-                  background: "rgba(60,90,100,0.06)", border: "1px solid rgba(60,90,100,0.12)",
+                  background: "rgba(60,120,130,0.08)", border: "1px solid rgba(60,120,130,0.15)",
                   display: "flex", alignItems: "center", justifyContent: "center",
-                  fontSize: "1rem", color: "#6A8A94",
+                  fontSize: "1rem", color: "#7A9AA6",
                   transition: "transform 0.3s ease",
                   transform: active === i ? "rotate(45deg)" : "none",
                 }}>+</div>
@@ -340,7 +340,7 @@ function Work() {
             </div>
           </FadeIn>
         ))}
-        <div style={{ borderTop: "1px solid rgba(60,90,100,0.1)" }} />
+        <div style={{ borderTop: "1px solid rgba(60,120,130,0.15)" }} />
       </div>
     </section>
   );
@@ -348,11 +348,11 @@ function Work() {
 
 function Services() {
   return (
-    <section id="services" style={{ padding: "8rem 2rem", background: "rgba(60,90,100,0.03)", borderTop: "1px solid rgba(60,90,100,0.08)", borderBottom: "1px solid rgba(60,90,100,0.08)" }}>
+    <section id="services" style={{ padding: "8rem 2rem", background: "rgba(60,120,130,0.04)", borderTop: "1px solid rgba(60,120,130,0.1)", borderBottom: "1px solid rgba(60,120,130,0.1)" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <FadeIn>
-          <p style={{ fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#9AB4BC", marginBottom: "0.75rem" }}>What I Do</p>
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 400, color: "#2E3D42", margin: "0 0 5rem", letterSpacing: "-0.01em", maxWidth: "600px" }}>
+          <p style={{ fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#4A6A74", marginBottom: "0.75rem" }}>What I Do</p>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 400, color: "#E8EDEE", margin: "0 0 5rem", letterSpacing: "-0.01em", maxWidth: "600px" }}>
             Services built around what actually moves your business forward.
           </h2>
         </FadeIn>
@@ -362,35 +362,35 @@ function Services() {
             <FadeIn key={s.title} delay={i * 0.1}>
               <div style={{
                 padding: "2.5rem 2rem",
-                borderLeft: i === 0 ? "1px solid rgba(60,90,100,0.1)" : "none",
-                borderRight: "1px solid rgba(60,90,100,0.1)",
-                borderTop: "1px solid rgba(60,90,100,0.1)",
-                borderBottom: "1px solid rgba(60,90,100,0.1)",
+                borderLeft: i === 0 ? "1px solid rgba(60,120,130,0.15)" : "none",
+                borderRight: "1px solid rgba(60,120,130,0.15)",
+                borderTop: "1px solid rgba(60,120,130,0.15)",
+                borderBottom: "1px solid rgba(60,120,130,0.15)",
                 height: "100%",
                 transition: "background 0.3s",
               }}
-                onMouseEnter={e => e.currentTarget.style.background = "rgba(60,90,100,0.04)"}
+                onMouseEnter={e => e.currentTarget.style.background = "rgba(60,120,130,0.06)"}
                 onMouseLeave={e => e.currentTarget.style.background = "transparent"}
               >
                 <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1rem", color: "#7EAAA8", marginBottom: "1.5rem" }}>{s.number}</div>
-                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.6rem", fontWeight: 400, color: "#2E3D42", margin: "0 0 1rem", letterSpacing: "-0.01em" }}>{s.title}</h3>
-                <p style={{ fontSize: "0.85rem", color: "#6A8A94", lineHeight: 1.75, margin: 0 }}>{s.desc}</p>
+                <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.6rem", fontWeight: 400, color: "#E8EDEE", margin: "0 0 1rem", letterSpacing: "-0.01em" }}>{s.title}</h3>
+                <p style={{ fontSize: "0.85rem", color: "#7A9AA6", lineHeight: 1.75, margin: 0 }}>{s.desc}</p>
               </div>
             </FadeIn>
           ))}
         </div>
 
         <FadeIn delay={0.2}>
-          <div style={{ marginTop: "6rem", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "3rem", paddingTop: "4rem", borderTop: "1px solid rgba(60,90,100,0.1)" }}>
+          <div style={{ marginTop: "6rem", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "3rem", paddingTop: "4rem", borderTop: "1px solid rgba(60,120,130,0.15)" }}>
             {[
               { n: "01", t: "Strategy", d: "Understanding your goals, audience, and the one action you want visitors to take." },
               { n: "02", t: "Design & Build", d: "Clean, responsive, intentional — designed from the ground up, not copied from a template." },
               { n: "03", t: "Launch & Refine", d: "Optimized for performance, polished in every detail, and ready to represent your brand." },
             ].map(p => (
               <div key={p.n}>
-                <div style={{ fontSize: "0.7rem", letterSpacing: "0.15em", color: "#9AB4BC", marginBottom: "1rem" }}>{p.n}</div>
-                <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.4rem", color: "#2E3D42", marginBottom: "0.75rem" }}>{p.t}</div>
-                <div style={{ fontSize: "0.83rem", color: "#6A8A94", lineHeight: 1.75 }}>{p.d}</div>
+                <div style={{ fontSize: "0.7rem", letterSpacing: "0.15em", color: "#4A6A74", marginBottom: "1rem" }}>{p.n}</div>
+                <div style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.4rem", color: "#E8EDEE", marginBottom: "0.75rem" }}>{p.t}</div>
+                <div style={{ fontSize: "0.83rem", color: "#7A9AA6", lineHeight: 1.75 }}>{p.d}</div>
               </div>
             ))}
           </div>
@@ -406,8 +406,8 @@ function About() {
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6rem", alignItems: "start" }}>
         <FadeIn>
           <div>
-            <p style={{ fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#9AB4BC", marginBottom: "0.75rem" }}>About</p>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2.5rem, 4vw, 3.5rem)", fontWeight: 400, color: "#2E3D42", margin: "0 0 2.5rem", letterSpacing: "-0.01em", lineHeight: 1.1 }}>
+            <p style={{ fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#4A6A74", marginBottom: "0.75rem" }}>About</p>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2.5rem, 4vw, 3.5rem)", fontWeight: 400, color: "#E8EDEE", margin: "0 0 2.5rem", letterSpacing: "-0.01em", lineHeight: 1.1 }}>
               I care about what your website does, not just what it looks like.
             </h2>
 
@@ -417,7 +417,7 @@ function About() {
                 "I come from a background in front-end development, but design is where I spend most of my thinking. I care about hierarchy, clarity, and what happens the moment someone lands on a page — whether they stay, read, and reach out.",
                 "Every site I build is custom-coded. That means no Webflow, no Squarespace, no templates dressed up as something original. Just clean, intentional work built to grow with your brand.",
               ].map((t, i) => (
-                <p key={i} style={{ fontSize: "0.92rem", color: "#6A8A94", lineHeight: 1.85, margin: 0 }}>{t}</p>
+                <p key={i} style={{ fontSize: "0.92rem", color: "#7A9AA6", lineHeight: 1.85, margin: 0 }}>{t}</p>
               ))}
             </div>
           </div>
@@ -427,12 +427,12 @@ function About() {
           <div>
             <div style={{
               width: "100%", aspectRatio: "3/4", borderRadius: "4px",
-              background: "rgba(60,90,100,0.04)",
-              border: "1px solid rgba(60,90,100,0.1)",
+              background: "rgba(60,120,130,0.06)",
+              border: "1px solid rgba(60,120,130,0.15)",
               display: "flex", alignItems: "center", justifyContent: "center",
               marginBottom: "2.5rem", position: "relative", overflow: "hidden",
             }}>
-              <img src="/logo.jpg" alt="About" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+              <img src="/logo2.jpg" alt="About" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
             </div>
 
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -442,9 +442,9 @@ function About() {
                 ["Focus", "Small Businesses & Personal Brands"],
                 ["Response time", "Within 24 hours"],
               ].map(([k, v]) => (
-                <div key={k} style={{ display: "flex", justifyContent: "space-between", padding: "0.9rem 0", borderBottom: "1px solid rgba(60,90,100,0.08)" }}>
-                  <span style={{ fontSize: "0.78rem", color: "#9AB4BC", letterSpacing: "0.05em" }}>{k}</span>
-                  <span style={{ fontSize: "0.78rem", color: "#2E3D42" }}>{v}</span>
+                <div key={k} style={{ display: "flex", justifyContent: "space-between", padding: "0.9rem 0", borderBottom: "1px solid rgba(60,120,130,0.1)" }}>
+                  <span style={{ fontSize: "0.78rem", color: "#4A6A74", letterSpacing: "0.05em" }}>{k}</span>
+                  <span style={{ fontSize: "0.78rem", color: "#E8EDEE" }}>{v}</span>
                 </div>
               ))}
             </div>
@@ -464,11 +464,11 @@ function About() {
 function FAQ() {
   const [open, setOpen] = useState(null);
   return (
-    <section style={{ padding: "8rem 2rem", background: "rgba(60,90,100,0.03)", borderTop: "1px solid rgba(60,90,100,0.08)" }}>
+    <section style={{ padding: "8rem 2rem", background: "rgba(60,120,130,0.04)", borderTop: "1px solid rgba(60,120,130,0.1)" }}>
       <div style={{ maxWidth: "800px", margin: "0 auto" }}>
         <FadeIn>
-          <p style={{ fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#9AB4BC", marginBottom: "0.75rem" }}>FAQ</p>
-          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 400, color: "#2E3D42", margin: "0 0 4rem", letterSpacing: "-0.01em" }}>
+          <p style={{ fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#4A6A74", marginBottom: "0.75rem" }}>FAQ</p>
+          <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 400, color: "#E8EDEE", margin: "0 0 4rem", letterSpacing: "-0.01em" }}>
             Common questions
           </h2>
         </FadeIn>
@@ -476,7 +476,7 @@ function FAQ() {
         <div>
           {FAQS.map((f, i) => (
             <FadeIn key={i} delay={i * 0.06}>
-              <div style={{ borderTop: "1px solid rgba(60,90,100,0.1)" }}>
+              <div style={{ borderTop: "1px solid rgba(60,120,130,0.15)" }}>
                 <button
                   onClick={() => setOpen(open === i ? null : i)}
                   style={{
@@ -485,11 +485,11 @@ function FAQ() {
                     cursor: "pointer", textAlign: "left", gap: "1.5rem",
                   }}
                 >
-                  <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.2rem", color: "#2E3D42", fontWeight: 400 }}>{f.q}</span>
+                  <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.2rem", color: "#E8EDEE", fontWeight: 400 }}>{f.q}</span>
                   <span style={{
                     flexShrink: 0, width: "24px", height: "24px", borderRadius: "50%",
-                    border: "1px solid rgba(60,90,100,0.2)", display: "flex", alignItems: "center", justifyContent: "center",
-                    color: "#6A8A94", fontSize: "0.9rem",
+                    border: "1px solid rgba(60,120,130,0.25)", display: "flex", alignItems: "center", justifyContent: "center",
+                    color: "#7A9AA6", fontSize: "0.9rem",
                     transition: "transform 0.3s", transform: open === i ? "rotate(45deg)" : "none",
                   }}>+</span>
                 </button>
@@ -497,12 +497,12 @@ function FAQ() {
                   overflow: "hidden", maxHeight: open === i ? "200px" : "0",
                   transition: "max-height 0.4s cubic-bezier(0.16,1,0.3,1)",
                 }}>
-                  <p style={{ fontSize: "0.88rem", color: "#6A8A94", lineHeight: 1.85, paddingBottom: "1.75rem", margin: 0 }}>{f.a}</p>
+                  <p style={{ fontSize: "0.88rem", color: "#7A9AA6", lineHeight: 1.85, paddingBottom: "1.75rem", margin: 0 }}>{f.a}</p>
                 </div>
               </div>
             </FadeIn>
           ))}
-          <div style={{ borderTop: "1px solid rgba(60,90,100,0.1)" }} />
+          <div style={{ borderTop: "1px solid rgba(60,120,130,0.15)" }} />
         </div>
       </div>
     </section>
@@ -515,39 +515,39 @@ function Contact() {
       <FadeIn>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "6rem", alignItems: "start" }}>
           <div>
-            <p style={{ fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#9AB4BC", marginBottom: "0.75rem" }}>Contact</p>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2.5rem, 4vw, 4rem)", fontWeight: 400, color: "#2E3D42", margin: "0 0 2rem", letterSpacing: "-0.01em", lineHeight: 1.1 }}>
+            <p style={{ fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "#4A6A74", marginBottom: "0.75rem" }}>Contact</p>
+            <h2 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "clamp(2.5rem, 4vw, 4rem)", fontWeight: 400, color: "#E8EDEE", margin: "0 0 2rem", letterSpacing: "-0.01em", lineHeight: 1.1 }}>
               Let's build something worth showing off.
             </h2>
-            <p style={{ fontSize: "0.9rem", color: "#6A8A94", lineHeight: 1.8, marginBottom: "3rem" }}>
+            <p style={{ fontSize: "0.9rem", color: "#7A9AA6", lineHeight: 1.8, marginBottom: "3rem" }}>
               If you're ready to invest in a website that actually represents the quality of your work, reach out. I'll get back to you within 24 hours.
             </p>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-              <a href="mailto:ariwodomichael5@gmail.com" style={{
+              <a href="mailto:your@email.com" style={{
                 display: "inline-flex", alignItems: "center", gap: "0.75rem",
                 fontSize: "0.82rem", letterSpacing: "0.1em", textTransform: "uppercase",
-                color: "#F0EEE8", textDecoration: "none",
-                background: "#2E3D42", border: "1px solid #2E3D42",
+                color: "#0A0E0F", textDecoration: "none",
+                background: "#E8EDEE", border: "1px solid #E8EDEE",
                 padding: "1rem 1.5rem", borderRadius: "4px",
                 transition: "background 0.2s",
                 fontWeight: 600,
               }}
                 onMouseEnter={e => e.currentTarget.style.background = "#5E8E8C"}
-                onMouseLeave={e => e.currentTarget.style.background = "#2E3D42"}
+                onMouseLeave={e => e.currentTarget.style.background = "#E8EDEE"}
               >
                 ✉ Email Me
               </a>
-              <a href="https://www.linkedin.com/in/michaelariwodo/" style={{
+              <a href="https://www.linkedin.com" style={{
                 display: "inline-flex", alignItems: "center", gap: "0.75rem",
                 fontSize: "0.82rem", letterSpacing: "0.1em", textTransform: "uppercase",
-                color: "#6A8A94", textDecoration: "none",
-                border: "1px solid rgba(60,90,100,0.15)",
+                color: "#7A9AA6", textDecoration: "none",
+                border: "1px solid rgba(60,120,130,0.2)",
                 padding: "1rem 1.5rem", borderRadius: "4px",
                 transition: "all 0.2s",
               }}
-                onMouseEnter={e => { e.currentTarget.style.background = "rgba(60,90,100,0.04)"; e.currentTarget.style.color = "#2E3D42"; }}
-                onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#6A8A94"; }}
+                onMouseEnter={e => { e.currentTarget.style.background = "rgba(60,120,130,0.06)"; e.currentTarget.style.color = "#E8EDEE"; }}
+                onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#7A9AA6"; }}
               >
                 ↗ LinkedIn
               </a>
@@ -557,15 +557,14 @@ function Contact() {
           <div style={{ paddingTop: "4rem" }}>
             <div style={{ display: "flex", flexDirection: "column" }}>
               {[
-                ["Landing Pages ", "$300"],
-                ["Full Websites Starting at", "$1,000"],
+                ["Starting at", "$1,000"],
                 ["Typical timeline", "2–4 weeks"],
                 ["Current availability", "Open to new clients"],
                 ["Best for", "Brands ready to level up"],
               ].map(([k, v]) => (
-                <div key={k} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "1.25rem 0", borderBottom: "1px solid rgba(60,90,100,0.08)" }}>
-                  <span style={{ fontSize: "0.78rem", color: "#9AB4BC", letterSpacing: "0.05em" }}>{k}</span>
-                  <span style={{ fontSize: "0.88rem", color: v === "Open to new clients" ? "#5E8E8C" : "#2E3D42", fontWeight: v === "Open to new clients" ? 500 : 400 }}>{v}</span>
+                <div key={k} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "1.25rem 0", borderBottom: "1px solid rgba(60,120,130,0.1)" }}>
+                  <span style={{ fontSize: "0.78rem", color: "#4A6A74", letterSpacing: "0.05em" }}>{k}</span>
+                  <span style={{ fontSize: "0.88rem", color: v === "Open to new clients" ? "#5E8E8C" : "#E8EDEE", fontWeight: v === "Open to new clients" ? 500 : 400 }}>{v}</span>
                 </div>
               ))}
             </div>
@@ -585,17 +584,17 @@ function Contact() {
 function Footer() {
   return (
     <footer style={{
-      borderTop: "1px solid rgba(60,90,100,0.1)",
+      borderTop: "1px solid rgba(60,120,130,0.15)",
       padding: "2rem",
       display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem",
     }}>
-      <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.1rem", color: "#9AB4BC" }}>Draux</span>
-      <span style={{ fontSize: "0.72rem", letterSpacing: "0.1em", color: "#9AB4BC", textTransform: "uppercase" }}>
+      <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: "1.1rem", color: "#4A6A74" }}>Draux</span>
+      <span style={{ fontSize: "0.72rem", letterSpacing: "0.1em", color: "#4A6A74", textTransform: "uppercase" }}>
         © {new Date().getFullYear()} Draux — All Rights Reserved
       </span>
       <div style={{ display: "flex", gap: "2rem" }}>
         {["Work", "About", "Contact"].map(l => (
-          <a key={l} href={`#${l.toLowerCase()}`} style={{ fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "#9AB4BC", textDecoration: "none" }}>{l}</a>
+          <a key={l} href={`#${l.toLowerCase()}`} style={{ fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "#4A6A74", textDecoration: "none" }}>{l}</a>
         ))}
       </div>
     </footer>
@@ -608,24 +607,24 @@ export default function Portfolio() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap');
         :root {
-          --bg: #F0EEE8;
-          --surface: #EDEADE;
-          --border: rgba(60,90,100,0.1);
-          --text: #2E3D42;
-          --text-secondary: #6A8A94;
-          --text-muted: #9AB4BC;
+          --bg: #0A0E0F;
+          --surface: #0F1518;
+          --border: rgba(60,120,130,0.15);
+          --text: #E8EDEE;
+          --text-secondary: #7A9AA6;
+          --text-muted: #4A6A74;
           --accent: #5E8E8C;
           --accent-light: #7EAAA8;
         }
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
-        body { background: #F0EEE8; color: #2E3D42; font-family: 'DM Sans', sans-serif; }
-        ::selection { background: rgba(94,142,140,0.15); color: #2E3D42; }
+        body { background: #0A0E0F; color: #E8EDEE; font-family: 'DM Sans', sans-serif; }
+        ::selection { background: rgba(94,142,140,0.2); color: #E8EDEE; }
         ::-webkit-scrollbar { width: 4px; }
-        ::-webkit-scrollbar-track { background: #F0EEE8; }
-        ::-webkit-scrollbar-thumb { background: #9AB4BC; }
+        ::-webkit-scrollbar-track { background: #0A0E0F; }
+        ::-webkit-scrollbar-thumb { background: #4A6A74; }
       `}</style>
-      <div style={{ background: "#F0EEE8", minHeight: "100vh" }}>
+      <div style={{ background: "#0A0E0F", minHeight: "100vh" }}>
         <Nav />
         <Hero />
         <Work />
