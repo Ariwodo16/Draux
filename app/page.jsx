@@ -524,7 +524,7 @@ function Contact() {
             </p>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-              <a href="mailto:your@email.com" style={{
+              <a href="mailto:ariwodomichael6@gmail.com" style={{
                 display: "inline-flex", alignItems: "center", gap: "0.75rem",
                 fontSize: "0.82rem", letterSpacing: "0.1em", textTransform: "uppercase",
                 color: "#0A0E0F", textDecoration: "none",
