@@ -75,7 +75,7 @@ const SERVICES = [
 const FAQS = [
   {
     q: "How long does a typical project take?",
-    a: "Most brand websites take 3–5 weeks from kickoff to launch. Landing pages are typically 1–2 weeks. Timeline depends on how quickly feedback comes in.",
+    a: "Most brand websites take 2–4 weeks from kickoff to launch. Landing pages are typically 1–2 weeks. Timeline depends on how quickly feedback comes in.",
   },
   {
     q: "Do you work with clients who already have a designer?",
